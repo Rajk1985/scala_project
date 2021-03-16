@@ -14,7 +14,7 @@ object ReadCsv {
 
       spark.read
         .option("header", "true")
-        .format("csv").load("F:\\Documents\\PLSQL Programs\\Hadoop\\Dataset\\us-500.csv")
+        .format("csv").load("F:\\bigdata\\Dataset\\us-500.csv")
 
     df.printSchema()
     df.show()
