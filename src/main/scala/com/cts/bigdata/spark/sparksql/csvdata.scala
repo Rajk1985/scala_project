@@ -21,9 +21,17 @@ object csvdata {
     //val res = spark.sql ("select * from tab where state = 'NJ'" )
     // val res = spark.sql("select state, count(*) cnt from tab group by state order by cnt desc")
     //val res = df.select("*").where($"state"==="NJ" && $"email".like("%gmail.com%"))
-    val res = df.groupBy($"state").agg(count("*").alias("cnt")).orderBy($"cnt".desc)
+    //val res = df.groupBy($"state").agg(count("*").alias("cnt")).orderBy($"cnt".desc)
 
+    //concat_ws --<-- concat with seperator  SQL Way
+    val res = spark.sql("Select concat_ws(' ',first_name,last_name) fullname,* from tab where state = 'NJ'")
     res.show()
+
+    //concat_ws DSL way
+
+    val res1 = df.withColumn("FullName",concat_ws(" ",$"first_name",$"last_name",$"State"))
+    res1.show()
+
 
     spark.stop()
   }
