@@ -32,7 +32,10 @@ object complexcsv {
     // val all = Array("Empid","Firstname","lastname")
     //val ndf = df.toDF(all:_*) this same as val ndf = df.toDF("Empid","Firstname","lastname")
 
-    val ndf = df.toDF(cols:_*)
+    //val ndf = df.toDF(cols:_*)
+
+    //To put date in specific format use Format option
+    val ndf = df.toDF(cols:_*).withColumn("DateofBirth",to_date($"DateofBirth","MM/dd/yyyy"))
 
     //Putting $ infront of columnname will make spark understandng that its nt a string bt a columnname
     ndf.select($"empid",$"email").show(2,false)
