@@ -15,15 +15,19 @@ object bankfullcsv {
 
     val data = "F:\\bigdata\\Dataset\\bank-full.csv"
     val df = spark.read.format("csv").option("header","true").option("inferSchema","true").option("delimiter",";").load(data)
-    df.show(2)
+
+    //option("delimiter",";") --<-- This is used incase the column seperator is not comma(,)
+
+    //df.show(2)
 
     df.createTempView("tab")
-    //val res = spark.sql ("select * from tab where agr > 85" )
-     //val res = df.where($"age" >85)
+    //val res = spark.sql ("select * from tab where age > 85" )
+    //val res = df.where($"age" >85)
 
+    // to add extra column we use "withColumn"
     val res = df.withColumn("uid", monotonically_increasing_id())
 
-    res.show(2)
+    res.show()
 
 
     //---------------------------------------------------
