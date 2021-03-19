@@ -5,6 +5,7 @@ import org.apache.spark.sql.functions._
 
 object DateFunc {
   def main(args: Array[String]) {
+    //config("spark.sql.session.timeZone","IST") --> added to adjust dates as per timeZone
     val spark = SparkSession.builder.master("local[*]").config("spark.sql.session.timeZone","IST").appName("complexcsv2").getOrCreate()
     //    val ssc = new StreamingContext(spark.sparkContext, Seconds(10))
     val sc = spark.sparkContext
