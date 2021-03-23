@@ -183,5 +183,19 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../../../Softwares/drivers/mysql-connector-java-8.0.12.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../../Softwares/drivers/postgresql-42.2.14.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../../Softwares/drivers/RedshiftJDBC42-1.2.10.1009.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../../Softwares/drivers/sqljdbc42.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../../../../Softwares/drivers/mariadb-java-client-2.6.1-sources.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
   </component>
 </module>
