@@ -5,7 +5,7 @@ import org.apache.spark.sql.functions._
 
 object csvdata {
   def main(args: Array[String]) {
-    val spark = SparkSession.builder.master("local[*]").appName("csvdata").getOrCreate()
+    val spark = SparkSession.builder.master("local[*]").appName("csvdata").enableHiveSupport().getOrCreate()
     //    val ssc = new StreamingContext(spark.sparkContext, Seconds(10))
     val sc = spark.sparkContext
     sc.setLogLevel("ERROR")
@@ -32,6 +32,8 @@ object csvdata {
     val res1 = df.withColumn("FullName",concat_ws(" ",$"first_name",$"last_name",$"State"))
     res1.show()
 
+    //Store data as hive table .Default format of hive will be taken. If you want any specfic format write that inplace of Hive
+    res1.write.mode(SaveMode.Overwrite).format("hive").saveAsTable("tabcsvdata")
 
     spark.stop()
   }

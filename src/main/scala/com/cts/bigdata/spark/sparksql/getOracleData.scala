@@ -41,6 +41,9 @@ object getOracleData {
     ndf.write.mode(SaveMode.Overwrite).format("jdbc").option("url",url).option("user","scott").option("password","tiger")
       .option("driver","oracle.jdbc.OracleDriver").option("dbtable","my10krecords").save()
 
+    //Store data as hive table .Default format of hive will be taken. If you want any specfic format write that inplace of Hive
+    //ndf.write.mode(SaveMode.Overwrite).format("hive").saveAsTable("myhivedata")
+
     //---------------------------------------------------
     spark.stop()
   }
