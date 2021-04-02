@@ -20,7 +20,9 @@ object rddsparkpoc {
     val res = brdd.filter(x=>x!=skip)
               .map(x=>x.replaceAll("\"",""))
               .map(x=>x.split(";"))
-              .map(x=>(x(0),x(1),x(2),x(3),x(4))).filter(x=>x._1.toInt>80 && x._3!="married" && x._4=="secondary").sortBy(x=>x._1,false)
+              .map(x=>(x(0),x(1),x(2),x(3),x(4)))
+               .filter(x=>x._1.toInt>80 && x._3 =="married" && x._4=="secondary")
+               .sortBy(x=>x._1,false)
 
         res.take(5).foreach(println)
     //---------------------------------------------------
