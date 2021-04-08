@@ -14,7 +14,7 @@ object WordCount {
     //----------Write Logic Here--------------------------
     //This program find the occurance of a word in an unstructured data
 
-    val data = "F:\\bigdata\\Dataset\\10000Records.csv"
+    val data = "F:\\bigdata\\Dataset\\10000Records.csv" //you can use arg[0] if you want to parameterized
 
     val drdd = sc.textFile(data)
 
