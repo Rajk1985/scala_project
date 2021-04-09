@@ -14,3 +14,11 @@ libraryDependencies += "org.apache.spark" %% "spark-streaming" % sparkVersion
 // https://mvnrepository.com/artifact/com.datastax.spark/spark-cassandra-connector
 libraryDependencies += "com.datastax.spark" %% "spark-cassandra-connector" % "2.5.1"
 
+// https://mvnrepository.com/artifact/org.apache.spark/spark-streaming-kafka-0-10
+libraryDependencies += "org.apache.spark" %% "spark-streaming-kafka-0-10" % sparkVersion
+// https://mvnrepository.com/artifact/org.apache.kafka/kafka-clients
+libraryDependencies += "org.apache.kafka" % "kafka-clients" % "2.4.0"
+// https://mvnrepository.com/artifact/org.apache.kafka/kafka
+libraryDependencies += "org.apache.kafka" %% "kafka" % "2.4.0"
+// https://mvnrepository.com/artifact/org.apache.kafka/kafka-streams
+libraryDependencies += "org.apache.kafka" % "kafka-streams" % "2.4.0"

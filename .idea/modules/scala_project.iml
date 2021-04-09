@@ -67,5 +67,27 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../../../Softwares/drivers/spark-streaming-kafka-0-10_2.11-2.4.7.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../../../../kafka_2.11-2.4.0/libs" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/../../../../kafka_2.11-2.4.0/libs" />
+        </SOURCES>
+        <jarDirectory url="file://$MODULE_DIR$/../../../../kafka_2.11-2.4.0/libs" recursive="false" />
+        <jarDirectory url="file://$MODULE_DIR$/../../../../kafka_2.11-2.4.0/libs" recursive="false" type="SOURCES" />
+      </library>
+    </orderEntry>
   </component>
 </module>

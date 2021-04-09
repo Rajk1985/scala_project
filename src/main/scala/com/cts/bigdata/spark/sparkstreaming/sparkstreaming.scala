@@ -51,9 +51,9 @@ object sparkstreaming {
       masinfo.write.mode(SaveMode.Append).jdbc(url,"livemas",prop)
 
     }
-
+    //Start Streaming
     ssc.start()
-    ssc.awaitTermination()
+    ssc.awaitTermination() //Dont terminate session
     //---------------------------------------------------
 
   }
