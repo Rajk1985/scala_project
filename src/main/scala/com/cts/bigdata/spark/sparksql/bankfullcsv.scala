@@ -16,6 +16,7 @@ object bankfullcsv {
     val data = "F:\\bigdata\\Dataset\\bank-full.csv"
     val df = spark.read.format("csv").option("header","true").option("inferSchema","true").option("delimiter",";").load(data)
 
+
     //option("delimiter",";") --<-- This is used incase the column seperator is not comma(,)
 
     //df.show(2)

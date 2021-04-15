@@ -11,21 +11,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="sbt: org.htrace:htrace-core:3.0.4:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.iq80.snappy:snappy:0.2:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.javassist:javassist:3.18.1-GA:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.javatuples:javatuples:1.2:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.jodd:jodd-core:3.5.2:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.json4s:json4s-ast_2.11:3.2.11:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.json4s:json4s-core_2.11:3.2.11:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.json4s:json4s-jackson_2.11:3.2.11:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.mortbay.jetty:jetty-util:6.1.26:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.objenesis:objenesis:2.1:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.reactivestreams:reactive-streams:1.0.2:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.roaringbitmap:RoaringBitmap:0.5.11:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.scala-lang.modules:scala-parser-combinators_2.11:1.0.4:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.scala-lang.modules:scala-xml_2.11:1.0.5:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.scala-lang:scala-compiler:2.11.12:jar" level="project" />
     <orderEntry type="library" name="sbt: org.scala-lang:scala-library:2.11.12:jar" level="project" />
     <orderEntry type="module-library">
       <library>
@@ -34,19 +19,6 @@
         </CLASSES>
         <JAVADOC />
         <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="file://C:/bigdata/spark-2.4.7-bin-hadoop2.7/jars" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="file://C:/bigdata/spark-2.4.7-bin-hadoop2.7/jars" />
-        </SOURCES>
-        <jarDirectory url="file://C:/bigdata/spark-2.4.7-bin-hadoop2.7/jars" recursive="false" />
-        <jarDirectory url="file://C:/bigdata/spark-2.4.7-bin-hadoop2.7/jars" recursive="false" type="SOURCES" />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -89,7 +61,7 @@
         <jarDirectory url="file://$MODULE_DIR$/../../../../kafka_2.11-2.4.0/libs" recursive="false" type="SOURCES" />
       </library>
     </orderEntry>
-    <orderEntry type="module-library" exported="">
+    <orderEntry type="module-library">
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/../../../../Softwares/drivers/flink-table-api-scala_2.11-1.12.2.jar!/" />
@@ -109,6 +81,37 @@
         </SOURCES>
         <jarDirectory url="file://$MODULE_DIR$/../../../../flink-1.12.2/lib" recursive="false" />
         <jarDirectory url="file://$MODULE_DIR$/../../../../flink-1.12.2/lib" recursive="false" type="SOURCES" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../../../Softwares/drivers/spark-avro_2.11-2.4.7.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../../../Softwares/drivers/spark-xml_2.11-0.12.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://C:/bigdata/spark-2.4.7-bin-hadoop2.7/jars" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://C:/bigdata/spark-2.4.7-bin-hadoop2.7/jars" />
+        </SOURCES>
+        <jarDirectory url="file://C:/bigdata/spark-2.4.7-bin-hadoop2.7/jars" recursive="false" />
+        <jarDirectory url="file://C:/bigdata/spark-2.4.7-bin-hadoop2.7/jars" recursive="false" type="SOURCES" />
       </library>
     </orderEntry>
   </component>
