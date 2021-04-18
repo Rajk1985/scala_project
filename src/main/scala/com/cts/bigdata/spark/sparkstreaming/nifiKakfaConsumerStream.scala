@@ -52,6 +52,10 @@ object nifiKakfaConsumerStream {
         // spark streaming by default generate rdd.... rdd convert to datarame
         val df = spark.read.json(a) //read Json input
         df.show(false)
+
+        //-------Writing to Oracle table-----
+        // val df = spark.read.json(x).withColumn("newcol",explode($"results")).drop($"results").select($"nationality",$"seed",$"newcol.user.",$"newcol.user.location.",$"newcol.user.name.*").drop("location","name","picture")
+        //  df.write.mode(SaveMode.Append).jdbc(ourl,"nifitab",oprop)
       }
       //---------------------------------------------------
     //Start Streaming
