@@ -1,3 +1,4 @@
+/*
 package com.cts.bigdata.spark.flinkapi
 
 import org.apache.flink.api.common.typeinfo.{BasicTypeInfo, TypeInformation}
@@ -32,4 +33,4 @@ object mysqldata {
     ds.print()
 
   }
-}
+}*/

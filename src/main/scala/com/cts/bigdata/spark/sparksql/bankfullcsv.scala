@@ -23,12 +23,14 @@ object bankfullcsv {
 
     df.createTempView("tab")
     //val res = spark.sql ("select * from tab where age > 85" )
-    //val res = df.where($"age" >85)
-
-    // to add extra column we use "withColumn"
-    val res = df.withColumn("uid", monotonically_increasing_id())
+    val res = df.where($"age" >85)
 
     res.show()
+
+    // to add extra column we use "withColumn"
+    val res1 = df.withColumn("uid", monotonically_increasing_id())
+
+    res1.show()
 
 
     //---------------------------------------------------

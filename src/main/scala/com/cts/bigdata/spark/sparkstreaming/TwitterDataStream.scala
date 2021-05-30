@@ -23,10 +23,17 @@ object TwitterDataStream {
     import spark.implicits._
     import spark.sql
     //----------Write Logic Here--------------------------
-    val APIkey= "Xe8OaomGxpyimZdUDiHVBubXB"
-    val APIsecretkey= "S3Oczd5emhVqXiufeP1JsJmmk3LeYyItfaR0sFrodu7HwwYEsW"
-    val Accesstoken = "181460431-ecrA8u8mY9qujNB7pbiLp0GwrWr6qNe3DRSOEYfS"
-    val Accesstokensecret = "2yK5r7mCYS4J4DBNXus7FWzYOOCR6pVXVvpLhG1M2r3aT"
+    // Below are Venu Twitter keys
+    //val APIkey= "Xe8OaomGxpyimZdUDiHVBubXB"
+    //val APIsecretkey= "S3Oczd5emhVqXiufeP1JsJmmk3LeYyItfaR0sFrodu7HwwYEsW"
+    //val Accesstoken = "181460431-ecrA8u8mY9qujNB7pbiLp0GwrWr6qNe3DRSOEYfS"
+    //val Accesstokensecret = "2yK5r7mCYS4J4DBNXus7FWzYOOCR6pVXVvpLhG1M2r3aT"
+
+    //My twitter Keys
+    val APIkey= "aPgcsBBKXTo26yCigO4TWeLlJ"
+    val APIsecretkey= "V5lMplMsVLOzuNdUMlplUJJ4F8ECCwnrpfe3mjn1280UCY3gek"
+    val Accesstoken = "145335419-4VI0DCrDYo8pd4P3lj93fNF8kJt76vczwgmqfvbI"
+    val Accesstokensecret = "Us6y2FyovciWiXlapL0lp4Z6SQ7BfeixZ9RcUQzOBvgZ3"
 
     System.setProperty("twitter4j.oauth.consumerKey", APIkey)
     System.setProperty("twitter4j.oauth.consumerSecret", APIsecretkey)
@@ -34,7 +41,7 @@ object TwitterDataStream {
     System.setProperty("twitter4j.oauth.accessTokenSecret", Accesstokensecret)
     //val lines = ssc.socketTextStream("localhost", 9999)
 
-    val searchFilter = "trump,CORONA, USA election, Election2020, DONALD TRUMP "
+    val searchFilter = "Corona, Bengal Election,india"//"trump,CORONA, USA election, Election2020, DONALD TRUMP "
     // create dstream
     val tweetStream = TwitterUtils.createStream(ssc, None, Seq(searchFilter.toString))
 
@@ -49,8 +56,9 @@ object TwitterDataStream {
 
       //Create Temp Table for sql processing
       df.createOrReplaceTempView("tab")
-      val res = spark.sql("select * from tab where msg like '%https://%'")
-      res.show(false)
+      //val res = spark.sql("select * from tab where msg like '%https://%'")
+      val res = spark.sql("select * from tab where username like 'Raj%'")
+      res.show()
 
       //Writing the data to local
       val path = "F:\\bigdata\\Dataset\\output\\twitterdata"
