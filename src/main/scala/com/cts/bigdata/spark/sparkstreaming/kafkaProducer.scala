@@ -25,7 +25,7 @@ object kafkaProducer {
     //----------Write Logic Here--------------------------
     val logs = "C:\\Users\\RAJ\\Downloads\\access.log"
     // Reading data from log path
-    val data = spark.sparkContext.textFile(logs)
+    val data = sc.textFile(logs)
 
     val topic = "logs"
 

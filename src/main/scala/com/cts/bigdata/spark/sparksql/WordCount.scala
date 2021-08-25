@@ -18,6 +18,7 @@ object WordCount {
 
     val drdd = sc.textFile(data)
 
+    drdd.take(5).foreach(println)
     //Flatmap - Apply Logix on top of each and every element and then flatten the result
     //Input Output element length is not same i.e 3 input elemnt output can be 10 element
 

@@ -14,16 +14,15 @@ object bankfullcsv {
     //----------Write Logic Here--------------------------
 
     val data = "F:\\bigdata\\Dataset\\bank-full.csv"
-    val df = spark.read.format("csv").option("header","true").option("inferSchema","true").option("delimiter",";").load(data)
+    val df = spark.read.format("csv").option("header","true").option("delimiter",";").option("inferSchema","true").load(data)
 
-
-    //option("delimiter",";") --<-- This is used incase the column seperator is not comma(,)
+    //.option("delimiter",";") --<-- This is used incase the column seperator is not comma(,)
 
     //df.show(2)
 
     df.createTempView("tab")
-    //val res = spark.sql ("select * from tab where age > 85" )
-    val res = df.where($"age" >85)
+    val res = spark.sql ("select * from tab where age > 85" )
+    //val res = df.where($"age" >85)
 
     res.show()
 
