@@ -1,3 +1,12 @@
+val text = "Select count(*) as cnt   from NGRAW"
+
+val splitText = text.split("\\W+")
+
+println(splitText(3))
+
+val delim = text.drop(text.indexOfSlice("from ")+5).takeWhile(_.isLetter)
+println(delim)
+
 import org.apache.spark.sql._
 import org.apache.spark.sql.functions._
 
